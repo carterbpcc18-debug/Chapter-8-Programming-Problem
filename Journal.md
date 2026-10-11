@@ -110,3 +110,37 @@ the Flyable ability would not qualify.
 verify that Thunderwing is identified as capable of
 flight and that the other monsters are not identified
 by the scanner.
+
+
+## Phase 5: Validation & Reflection
+
+**Journal Prompt:** What bugs or edge cases did you
+discover during testing? If you consulted an LLM, what
+feedback did it provide, and did you choose to apply
+any of it? Explain your reasoning.
+
+**Response:**
+
+During testing, I checked that each monster performed
+its correct attack and that the ability scanner only
+identified monsters that implemented Flyable.
+
+I also checked that the abstract DigitalMonster class
+could not be instantiated directly. This helped me
+understand why abstract classes are useful when
+different subclasses need to provide their own behavior.
+
+One important edge case is that a monster can be stored
+as a DigitalMonster reference without necessarily
+having every possible ability. The instanceof check
+helps prevent the program from trying to use the fly()
+method on a monster that does not implement Flyable.
+
+I also reviewed the program's structure to make sure
+that common monster information was stored in the
+base class and that special abilities were defined
+using interfaces.
+
+**Final Testing:** After completing the tests, I will
+confirm that the program compiles and produces the
+expected output before submitting the assignment.
