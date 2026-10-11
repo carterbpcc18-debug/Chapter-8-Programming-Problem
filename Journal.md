@@ -80,3 +80,33 @@ add new monster types without changing the basic loop.
 **Testing:** I will compile and run the program to
 confirm that all four monsters appear in the catalog
 and perform their own attacks.
+
+
+## Phase 4: The Ability Scanner
+
+**Journal Prompt:** How does the instanceof operator
+help you handle interfaces in a polymorphic list?
+Describe a scenario where this would be useful in a
+real game (e.g., a flying-only zone).
+
+**Response:**
+
+The instanceof operator checks whether an object
+implements a particular interface. Since my ArrayList
+contains DigitalMonster objects of different subclasses,
+not every monster has the Flyable ability.
+
+Using instanceof allows the scanner to identify
+monsters that implement Flyable before calling fly().
+The cast lets me access the interface method through
+the DigitalMonster reference.
+
+In a real game, this could be useful in a flying-only
+zone. The game could check whether a character can fly
+before allowing it to enter the area. Monsters without
+the Flyable ability would not qualify.
+
+**Testing:** I will compile and run the program to
+verify that Thunderwing is identified as capable of
+flight and that the other monsters are not identified
+by the scanner.

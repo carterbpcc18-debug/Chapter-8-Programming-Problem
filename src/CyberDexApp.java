@@ -31,10 +31,18 @@ public class CyberDexApp {
         }
 
         System.out.println();
-        System.out.println("Special Abilities");
-        System.out.println("-----------------");
+        System.out.println("Ability Scanner");
+        System.out.println("---------------");
 
-        storm.fly();
-        storm.shock();
+        for (DigitalMonster monster : monsters) {
+            if (monster instanceof Flyable) {
+                System.out.println(
+                    monster.getName()
+                    + " is capable of flight!"
+                );
+
+                ((Flyable) monster).fly();
+            }
+        }
     }
 }
