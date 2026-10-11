@@ -51,3 +51,32 @@ separate from the common properties of all monsters.
 
 **Testing:** I will compile and run the program to
 verify StormBird's attack, flying, and electric abilities.
+
+
+## Phase 3: The Cyber-Dex Catalog
+
+**Journal Prompt:** Explain how polymorphism allows you
+to store different types of monsters (Flame, Aqua, Storm,
+etc.) in a single ArrayList. Why is this better than
+creating separate lists for every single monster species?
+
+**Response:**
+
+Polymorphism allows different monster classes to be
+stored in the same ArrayList because they all extend
+DigitalMonster. Even though each monster has its own
+attack implementation, I can refer to each one using
+the DigitalMonster type.
+
+The for-each loop calls performAttack() on every monster,
+and Java executes the implementation belonging to that
+monster's actual class.
+
+This is more convenient than creating separate lists
+for every species because the catalog can manage all
+monsters in one collection. It also makes it easier to
+add new monster types without changing the basic loop.
+
+**Testing:** I will compile and run the program to
+confirm that all four monsters appear in the catalog
+and perform their own attacks.

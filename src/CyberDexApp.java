@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class CyberDexApp {
 
     public static void main(String[] args) {
@@ -10,12 +12,23 @@ public class CyberDexApp {
         StormBird storm =
             new StormBird("Thunderwing", 8);
 
-        System.out.println("Cyber-Dex Monster Attacks");
+        EarthMonster earth =
+            new EarthMonster("Boulder", 6);
+
+        ArrayList<DigitalMonster> monsters =
+            new ArrayList<>();
+
+        monsters.add(flame);
+        monsters.add(aqua);
+        monsters.add(storm);
+        monsters.add(earth);
+
+        System.out.println("Cyber-Dex Monster Catalog");
         System.out.println("-------------------------");
 
-        flame.performAttack();
-        aqua.performAttack();
-        storm.performAttack();
+        for (DigitalMonster monster : monsters) {
+            monster.performAttack();
+        }
 
         System.out.println();
         System.out.println("Special Abilities");
